@@ -1,6 +1,27 @@
 ## Ramp Guide (Step-by-Step)
 
-Follow these commands exactly from repo root.
+Follow these steps end-to-end. Start by creating your own repo from this template.
+
+### 0) Create your repo from this template
+
+On GitHub:
+
+1) Click "Use this template" → "Create a new repository"
+2) Pick your owner, name (e.g., `edge-boot-<you>`), Public visibility
+3) Create repo, then clone locally:
+
+```bash
+git clone https://github.com/<you>/<your-repo>.git
+cd <your-repo>
+```
+
+4) Create a feature branch:
+
+```bash
+git checkout -b ship-bootstrap/<your-name>
+```
+
+5) Turn on branch protection for `main` (see steps in `GUIDE.md`).
 
 ### 1) Install prerequisites
 
@@ -63,12 +84,25 @@ pytest -q  # inside backend
 1) Create a feature branch: `git checkout -b ship-bootstrap/<your-name>`
 2) Push and open a PR against `main`
 3) Confirm both CI jobs are green (backend + frontend)
+4) Use the PR template. Be honest in the “AI usage” section.
 
 ### Screenshots (what you should see)
 
+- Template creation page
+
+![Use this template → Create new repo](docs/screenshots/template-use.png)
+
 - Browser hitting `http://localhost:8000/healthz` → JSON `{ "status": "ok" }`
+
+![Healthz JSON](docs/screenshots/healthz.png)
+
 - Frontend showing the list and an input/button to add an item
+
+![UI items list](docs/screenshots/ui-items.png)
+
 - PR page with green checks
+
+![PR with green checks](docs/screenshots/pr-green.png)
 
 ### Troubleshooting (Windows)
 

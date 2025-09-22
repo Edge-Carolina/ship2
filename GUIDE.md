@@ -2,6 +2,10 @@
 
 This ship bootstraps a minimal, reliable repo with a FastAPI backend, a React+TS+Vite frontend, and green CI. No DB yet—use an in-memory store.
 
+### Purpose of this guide
+
+This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use `RAMP_GUIDE.md` for prescriptive step-by-step, and `CORE_GUIDE.md` for a concise checklist and prompts.
+
 ### Objectives and Deliverables
 
 - Fresh, public repository with clear scaffolding
@@ -46,6 +50,10 @@ GitHub → Settings → Branches → Branch protection rules → Add rule:
 - Require status checks to pass before merging (select your CI workflow)
 - Restrict who can push to matching branches (optional for public forks)
 
+Placeholder screenshot:
+
+![Branch protection settings](docs/screenshots/branch-protection.png)
+
 ### Local Development
 
 ```bash
@@ -57,5 +65,17 @@ make dev
 ```
 
 Backend: `http://localhost:8000/healthz`  Frontend: `http://localhost:5173`
+
+### Start from this template (your own repo)
+
+On GitHub: Use this repo as a template → create your repo. Then:
+
+```bash
+git clone https://github.com/<you>/<your-repo>.git
+cd <your-repo>
+git checkout -b ship-bootstrap/<your-name>
+```
+
+Turn on branch protection for `main` (steps above), then follow Local Development.
 
 

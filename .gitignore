@@ -15,5 +15,6 @@ frontend/dist/
 # Misc
 .env
 coverage/
+docs/screenshots/
 
 
