@@ -28,6 +28,7 @@ git checkout -b ship-bootstrap/<your-name>
 Node via nvm:
 
 ```bash
+nvm install  # if Node 22.6.0 not yet installed
 nvm use  # reads .nvmrc (Node 22.x)
 ```
 

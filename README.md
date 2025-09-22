@@ -42,6 +42,7 @@ git push -u origin main
 Run from your repo root.
 
 ```bash
+nvm install  # if Node 22.6.0 not yet installed
 nvm use
 npm --prefix frontend ci
 python -m venv .venv && source .venv/bin/activate  # PowerShell: .\.venv\Scripts\Activate.ps1
