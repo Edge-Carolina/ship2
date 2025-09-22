@@ -1,0 +1,42 @@
+## Edge Boot
+
+Minimal, boring, and reliable bootstrap for Edge Labs with two parallel tracks:
+
+- Ramp (on rails): prescriptive, fewer choices
+- Core (self-reliant): choose options, justify trade-offs
+
+This repo ships a FastAPI backend and a React + TypeScript + Vite frontend, a green CI via PR (Node 22, Python 3.12), and clear guides. No database yet—just an in-memory store.
+
+### Quickstart
+
+Run from the repo root (`edge-boot/`).
+
+```bash
+nvm use
+npm --prefix frontend ci
+python -m venv .venv && source .venv/bin/activate  # PowerShell: .\.venv\Scripts\Activate.ps1
+pip install -e "backend[dev]"
+make dev  # backend on :8000, frontend on :5173
+```
+
+Open:
+
+- Backend: `http://localhost:8000/healthz`
+- Frontend: `http://localhost:5173`
+
+### What’s included
+
+- FastAPI backend: `GET /healthz`, `GET/POST /items` (in-memory store)
+- React + TS + Vite frontend: list items, add item
+- GitHub Actions CI: Python 3.12 + Node 22
+- PR template enforcing reflection and AI usage honesty
+- Two guides: `GUIDE.md` (general), `RAMP_GUIDE.md` (step-by-step), plus `CORE_GUIDE.md`
+- Makefile and npm scripts for a one-command dev loop
+
+### Where to read next
+
+- General guide: `GUIDE.md`
+- Ramp, step-by-step: `RAMP_GUIDE.md`
+- Core checklist and prompts: `CORE_GUIDE.md`
+
+
