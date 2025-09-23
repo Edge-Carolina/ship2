@@ -2,7 +2,7 @@
 
 No hand-holding. Hit the targets, explain trade-offs.
 
-**Start from the template** like Ramp, but then make your own choices about architecture, dependencies, and improvements. Use the scaffold as a foundation, then modify and justify your decisions.
+**Start from the template** like Ramp. Ship the same healthz/items endpoints and frontend experience, then decide which improvements matter most and why.
 
 ### Targets
 
@@ -23,12 +23,13 @@ No hand-holding. Hit the targets, explain trade-offs.
 - [ ] Tiny design polish
 - [ ] Docker devcontainer instead of venv
 - [ ] Different CI setup (GitLab, Buildkite, etc.)
+- [ ] Alternate lint/format tooling (biome, ruff, etc.)
 
 ### Explain and defend (answer in PR description)
 
-- What were your biggest architectural decisions and why?
+- Which optional improvements did you prioritize, and why?
 - What trade-offs did you make to meet the functional requirements?
 - If you changed anything from the template, what was your reasoning?
-- How did you balance getting it working vs. keeping it maintainable?
+- How did you balance quick delivery vs. long-term maintainability?
 
 
