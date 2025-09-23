@@ -1,10 +1,12 @@
 ## Guide (Both Tracks)
 
+Quick links: [Ramp Guide](RAMP_GUIDE.md) · [Core Guide](CORE_GUIDE.md)
+
 This ship bootstraps a minimal, reliable repo with a FastAPI backend, a React+TS+Vite frontend, and green CI. No DB yet—use an in-memory store.
 
 ### Purpose of this guide
 
-This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use `RAMP_GUIDE.md` for prescriptive step-by-step, and `CORE_GUIDE.md` for a concise checklist and prompts.
+This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use [RAMP_GUIDE.md](RAMP_GUIDE.md) for prescriptive step-by-step, and [CORE_GUIDE.md](CORE_GUIDE.md) for a concise checklist and prompts.
 
 ### Objectives and Deliverables
 

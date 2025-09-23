@@ -2,6 +2,8 @@
 
 No hand-holding. Hit the targets, explain trade-offs.
 
+**Start from the template** like Ramp, but then make your own choices about architecture, dependencies, and improvements. Use the scaffold as a foundation, then modify and justify your decisions.
+
 ### Targets
 
 - [ ] Public repo with scaffold
@@ -19,12 +21,14 @@ No hand-holding. Hit the targets, explain trade-offs.
 - [ ] Zod validation on client
 - [ ] Fetch retry policy tuning
 - [ ] Tiny design polish
+- [ ] Docker devcontainer instead of venv
+- [ ] Different CI setup (GitLab, Buildkite, etc.)
 
 ### Explain and defend (answer in PR description)
 
-- Why TanStack Query over manual fetch state?
-- What is your fetch retry policy and why?
-- How do you generate ids server-side, and why is that acceptable pre-DB?
-- What trade-offs did you make to keep the repo boring and reliable?
+- What were your biggest architectural decisions and why?
+- What trade-offs did you make to meet the functional requirements?
+- If you changed anything from the template, what was your reasoning?
+- How did you balance getting it working vs. keeping it maintainable?
 
 
