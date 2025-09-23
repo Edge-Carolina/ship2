@@ -35,7 +35,7 @@ nvm use  # reads .nvmrc (Node 22.x)
 Python venv:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv  # ensure python3 --version >= 3.12 (use python3.12 if needed)
 source .venv/bin/activate
 # PowerShell:
 # .\.venv\Scripts\Activate.ps1
@@ -52,6 +52,7 @@ pip install -e "backend[dev]"
 Frontend:
 
 ```bash
+npm --prefix frontend install  # sync package-lock.json on first run
 npm --prefix frontend ci
 ```
 

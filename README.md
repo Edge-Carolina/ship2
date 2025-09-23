@@ -39,13 +39,14 @@ git push -u origin main
 
 ### Quickstart
 
-Run from your repo root.
+Run from your repo root. Make sure your Python interpreter is 3.12 (check with `python3 --version`). If your default `python3` is older, use `python3.12` explicitly or install 3.12 via pyenv/brew.
 
 ```bash
 nvm install  # if Node 22.6.0 not yet installed
 nvm use
+npm --prefix frontend install  # sync package-lock.json on first run
 npm --prefix frontend ci
-python -m venv .venv && source .venv/bin/activate  # PowerShell: .\.venv\Scripts\Activate.ps1
+python3 -m venv .venv && source .venv/bin/activate  # ensure python3 --version >= 3.12 (PowerShell: .\.venv\Scripts\Activate.ps1)
 pip install -e "backend[dev]"
 make dev  # backend on :8000, frontend on :5173
 ```

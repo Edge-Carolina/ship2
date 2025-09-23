@@ -61,8 +61,9 @@ Placeholder screenshot:
 ```bash
 nvm install  # if Node 22.6.0 not yet installed
 nvm use
+npm --prefix frontend install  # sync package-lock.json on first run
 npm --prefix frontend ci
-python -m venv .venv && source .venv/bin/activate  # PowerShell: .\.venv\Scripts\Activate.ps1
+python3 -m venv .venv && source .venv/bin/activate  # ensure python3 --version >= 3.12 (PowerShell: .\.venv\Scripts\Activate.ps1)
 pip install -e "backend[dev]"
 make dev
 ```
