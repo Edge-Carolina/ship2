@@ -1,10 +1,3 @@
-## Edge Boot
-
-Minimal, boring, and reliable bootstrap for Edge Labs with two parallel tracks:
-
-- **Ramp (on rails)**: prescriptive, fewer choices → [RAMP_GUIDE.md](RAMP_GUIDE.md)
-- **Core (self-reliant)**: choose options, justify trade-offs → [CORE_GUIDE.md](CORE_GUIDE.md)
-
 This repo ships a FastAPI backend and a React + TypeScript + Vite frontend, a green CI via PR (Node 22, Python 3.12), and clear guides. No database yet—just an in-memory store.
 
 ### Track overview
@@ -14,8 +7,6 @@ This repo ships a FastAPI backend and a React + TypeScript + Vite frontend, a gr
 
 ### Documentation map
 
-- **Getting started (Ramp)**: [RAMP_GUIDE.md](RAMP_GUIDE.md)
-- **Core checklist + prompts**: [CORE_GUIDE.md](CORE_GUIDE.md)
 - **Spec, rubric, policies**: [GUIDE.md](GUIDE.md)
 - **CI & templates**: `.github/` (workflow, PR template, help-request issue)
 
