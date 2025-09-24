@@ -1,5 +1,3 @@
-## Guide (Both Tracks)
-
 ## Guide (Spec + Policies)
 
 Use this document as the source of truth for objectives, rubric, and shared policies. For how-to steps, jump to:
