@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ROLLUP_SKIP_NODE_NATIVE: '1'
+      NPM_CONFIG_IGNORE_OPTIONAL: 'true'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

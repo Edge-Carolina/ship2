@@ -1,25 +1,18 @@
 ## Edge Boot
 
-Minimal, boring, and reliable bootstrap for Edge Labs with two parallel tracks:
-
-- **Ramp (on rails)**: prescriptive, fewer choices → [RAMP_GUIDE.md](RAMP_GUIDE.md)
-- **Core (self-reliant)**: choose options, justify trade-offs → [CORE_GUIDE.md](CORE_GUIDE.md)
-
-git checkout -b ship-bootstrap/<your-name>
-git push -u origin main
-This repo ships a FastAPI backend and a React + TypeScript + Vite frontend, a green CI via PR (Node 22, Python 3.12), and clear guides. No database yet—just an in-memory store.
+Minimal, boring, and reliable bootstrap for Edge Labs. You’ll build a FastAPI backend and a React + TypeScript + Vite frontend with green CI (Node 22, Python 3.12). No database yet—just an in-memory store.
 
 ### Track overview
 
-- **Ramp (on rails)** – prescriptive, step-by-step execution following `RAMP_GUIDE.md`
-- **Core (self-reliant)** – same end goals, but you decide which improvements matter; see `CORE_GUIDE.md`
+- **Ramp (on rails)** – follow [RAMP_GUIDE.md](RAMP_GUIDE.md) for step-by-step execution
+- **Core (self-reliant)** – same goals, you decide which improvements matter; use [CORE_GUIDE.md](CORE_GUIDE.md)
 
 ### Documentation map
 
 - **Getting started (Ramp)**: [RAMP_GUIDE.md](RAMP_GUIDE.md)
 - **Core checklist + prompts**: [CORE_GUIDE.md](CORE_GUIDE.md)
 - **Spec, rubric, policies**: [GUIDE.md](GUIDE.md)
-- **CI & templates**: `.github/` (`workflows/ci.yml`, `pull_request_template.md`, `ISSUE_TEMPLATE/help_request.md`)
+- **CI & templates**: `.github/` (workflow, PR template, help-request issue)
 
 ### Prerequisites
 
