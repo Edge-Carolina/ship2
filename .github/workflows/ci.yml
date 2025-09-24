@@ -23,6 +23,8 @@ jobs:
   frontend:
     name: Frontend (Node 22)
     runs-on: ubuntu-latest
+    env:
+      ROLLUP_SKIP_NODE_NATIVE: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,8 +36,6 @@ jobs:
         run: npm --prefix frontend ci
       - name: Build
         run: npm --prefix frontend run build
-        env:
-          ROLLUP_SKIP_NODE_NATIVE: 'true'
       - name: Typecheck
         run: npm --prefix frontend run typecheck
 

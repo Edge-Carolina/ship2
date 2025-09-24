@@ -1,12 +1,12 @@
 ## Guide (Both Tracks)
 
-Quick links: [Ramp Guide](RAMP_GUIDE.md) · [Core Guide](CORE_GUIDE.md)
+## Guide (Spec + Policies)
 
-This ship bootstraps a minimal, reliable repo with a FastAPI backend, a React+TS+Vite frontend, and green CI. No DB yet—use an in-memory store.
+Use this document as the source of truth for objectives, rubric, and shared policies. For how-to steps, jump to:
 
-### Purpose of this guide
-
-This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use [RAMP_GUIDE.md](RAMP_GUIDE.md) for prescriptive step-by-step, and [CORE_GUIDE.md](CORE_GUIDE.md) for a concise checklist and prompts. The `.github/` directory holds CI workflows and templates (pull request template, help-request issue template).
+- Ramp (step-by-step): [RAMP_GUIDE.md](RAMP_GUIDE.md)
+- Core (checklist + prompts): [CORE_GUIDE.md](CORE_GUIDE.md)
+- CI & templates: see `.github/` (workflow, PR template, help-request template)
 
 ### Objectives and Deliverables
 
@@ -56,31 +56,12 @@ Placeholder screenshot:
 
 ![Branch protection settings](docs/screenshots/branch-protection.png)
 
-### Local Development
+### High-level workflow
 
-```bash
-nvm install  # if Node 22.6.0 not yet installed
-nvm use
-npm --prefix frontend install  # sync package-lock.json on first run
-npm --prefix frontend ci
-python3 -m venv .venv && source .venv/bin/activate  # ensure python3 --version >= 3.12 (PowerShell: .\.venv\Scripts\Activate.ps1)
-pip install -e "backend[dev]"
-make dev
-```
-
-Backend: `http://localhost:8000/healthz`  Frontend: `http://localhost:5173`
-
-### Start from this template (your own repo)
-
-On GitHub: Use this repo as a template → create your repo. Then:
-
-```bash
-git clone https://github.com/<you>/<your-repo>.git
-cd <your-repo>
-git checkout -b ship-bootstrap/<your-name>
-```
-
-Turn on branch protection for `main` (steps above), then follow Local Development.
+1. Create a public repo using this template (GitHub → Use this template)
+2. Protect `main` (require PR, require CI)
+3. Work on feature branches, squash merge via PR
+4. Keep CI green (backend pytest, frontend build/typecheck)
 
 ### What is CI?
 

@@ -2,39 +2,35 @@
 
 No hand-holding. Hit the targets, explain trade-offs.
 
-**Start from the template** like Ramp. Ship the same healthz/items endpoints and frontend experience, then decide which improvements matter most and why.
-
-Reference docs:
-- `.github/workflows/ci.yml` – how CI runs
-- `.github/pull_request_template.md` – expectations for PRs
-- `.github/ISSUE_TEMPLATE/help_request.md` – format for asking for help
+**Start from the template**, ship the same healthz/items backend and items UI, then decide which improvements (and trade-offs) matter most.
 
 ### Targets
 
 - [ ] Public repo with scaffold
-- [ ] Feature branch, squash merge via PR
 - [ ] Branch protection on `main`
-- [ ] Green CI (backend + frontend)
-- [ ] `GET /healthz` → `{ status: "ok" }`
-- [ ] `/items` GET/POST (id, text, created_at), most recent first
+- [ ] Feature branch → squash merge via PR
+- [ ] Green CI (backend pytest, frontend build/typecheck)
+- [ ] `/healthz` → `{ status: "ok" }`
+- [ ] `/items` GET/POST returning `{id, text, created_at}`, newest first
 - [ ] Frontend lists items and can add one
 
-### Optional improvements (choose your own)
+### Optional improvements (choose a few)
 
-- [ ] Optimistic UI for add
-- [ ] Minimal error boundary
-- [ ] Zod validation on client
-- [ ] Fetch retry policy tuning
-- [ ] Tiny design polish
-- [ ] Docker devcontainer instead of venv
-- [ ] Different CI setup (GitLab, Buildkite, etc.)
-- [ ] Alternate lint/format tooling (biome, ruff, etc.)
+- Optimistic UI for add
+- Minimal error boundary
+- Client-side validation (e.g., Zod)
+- Fetch retry/backoff strategy
+- Docker devcontainer instead of venv
+- Alternate lint/format tooling
+- CI tweaks (extra checks, different provider)
 
 ### Explain and defend (answer in PR description)
 
-- Which optional improvements did you prioritize, and why?
+- Which improvements did you prioritize, and why?
 - What trade-offs did you make to meet the functional requirements?
-- If you changed anything from the template, what was your reasoning?
-- How did you balance quick delivery vs. long-term maintainability?
+- If you diverged from the template, what drove that choice?
+- How did you balance shipping fast vs. keeping it maintainable?
+
+Reference docs: `README.md`, `.github/workflows/ci.yml`, `.github/pull_request_template.md`, `.github/ISSUE_TEMPLATE/help_request.md`.
 
 
