@@ -85,8 +85,8 @@ pytest -q  # inside backend
 
 1) Create a feature branch: `git checkout -b ship-bootstrap/<your-name>`
 2) Push and open a PR against `main`
-3) Confirm both CI jobs are green (backend + frontend)
-4) Use the PR template. Be honest in the “AI usage” section.
+3) Confirm both CI jobs are green (backend + frontend) – check the “Actions” tab for the workflow defined in `.github/workflows/ci.yml`
+4) Use the PR template. Be honest in the “AI usage” section. The template lives in `.github/pull_request_template.md`.
 
 ### Screenshots (what you should see)
 

@@ -4,6 +4,11 @@ No hand-holding. Hit the targets, explain trade-offs.
 
 **Start from the template** like Ramp. Ship the same healthz/items endpoints and frontend experience, then decide which improvements matter most and why.
 
+Reference docs:
+- `.github/workflows/ci.yml` – how CI runs
+- `.github/pull_request_template.md` – expectations for PRs
+- `.github/ISSUE_TEMPLATE/help_request.md` – format for asking for help
+
 ### Targets
 
 - [ ] Public repo with scaffold

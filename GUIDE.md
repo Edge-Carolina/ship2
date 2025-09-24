@@ -6,7 +6,7 @@ This ship bootstraps a minimal, reliable repo with a FastAPI backend, a React+TS
 
 ### Purpose of this guide
 
-This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use [RAMP_GUIDE.md](RAMP_GUIDE.md) for prescriptive step-by-step, and [CORE_GUIDE.md](CORE_GUIDE.md) for a concise checklist and prompts.
+This document is the high-level specification for both tracks. It defines what “done” means, the rubric, policies, and shared workflows (e.g., branch protection). Use [RAMP_GUIDE.md](RAMP_GUIDE.md) for prescriptive step-by-step, and [CORE_GUIDE.md](CORE_GUIDE.md) for a concise checklist and prompts. The `.github/` directory holds CI workflows and templates (pull request template, help-request issue template).
 
 ### Objectives and Deliverables
 
@@ -81,5 +81,13 @@ git checkout -b ship-bootstrap/<your-name>
 ```
 
 Turn on branch protection for `main` (steps above), then follow Local Development.
+
+### What is CI?
+
+Continuous integration (CI) automatically runs our tests and builds whenever you push or open a pull request. The workflow is defined in `.github/workflows/ci.yml` and runs two jobs:
+- Backend (Python 3.12): `pip install -e "backend[dev]"` then `pytest -q backend/tests`
+- Frontend (Node 22): `npm --prefix frontend ci`, `npm --prefix frontend run build`, `npm --prefix frontend run typecheck`
+
+The CI must be green before merging. Use the GitHub Actions tab to inspect failures and rerun after fixing.
 
 

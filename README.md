@@ -70,9 +70,19 @@ Open:
 - General guide: [GUIDE.md](GUIDE.md)
 - Ramp, step-by-step: [RAMP_GUIDE.md](RAMP_GUIDE.md)
 - Core checklist and prompts: [CORE_GUIDE.md](CORE_GUIDE.md)
+- CI and templates: explore `.github/` for the workflow (`workflows/ci.yml`), PR template, and help-request issue template.
 
 ### Full setup guide
 
 If you want the explicit end-to-end steps (create repo from template, branch protection, install, run, tiny change, open PR, confirm green CI), read `RAMP_GUIDE.md`.
+
+### What is CI (continuous integration)?
+
+CI is an automated check that runs every time you push or open a pull request. Our workflow lives in `.github/workflows/ci.yml` and runs two jobs:
+
+- Backend: installs Python 3.12, runs `pytest`
+- Frontend: installs Node 22, runs `npm run build` and `npm run typecheck`
+
+Green CI means both jobs succeed. If a job fails, open the “Actions” tab in GitHub to view logs, fix the issue locally, and push again.
 
 
